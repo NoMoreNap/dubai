@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    color: aliceblue;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    color-scheme: dark;
+}
+.main {
+    height: fit-content;
+    overflow-x: hidden;
+}
+.simplebar-track {
+    background-color: transparent;
+    width: 10px !important;
+    border-radius: 10px;
+}
+
+.simplebar-scrollbar {
+    border-radius: 10px;
+    opacity: 1;
+    max-height: 40px;
+    padding: 0;
+    width: 10px;
+}

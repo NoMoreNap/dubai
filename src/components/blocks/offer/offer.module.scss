@@ -1,0 +1,66 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 15vh;
+    padding-bottom: 15vh;
+
+}
+
+.img {
+    width: 690px;
+    height: 480px;
+    border-radius: 3px;
+}
+
+.fade_in {
+    animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+.disc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    gap: 2vh;
+    border: 1px solid #ffffff60;
+    border-right: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+
+    & h1 {
+        font-size: 3rem;
+        font-weight: 100;
+        width: fit-content;
+        cursor: pointer;
+        color: #ffffff6e;
+        transition: .2s color ease;
+    }
+}
+
+.p {
+    font-size: 1.2rem;
+    text-align: end;
+    font-weight: 100;
+    color: #ffffff60;
+}
