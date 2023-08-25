@@ -1,0 +1,65 @@
+.main {
+    width: 100%;
+    height: fit-content;
+    padding: 70px 50px;
+    background-color: rgba(0, 0, 0, 0.575);
+    border-image: linear-gradient(90deg, #d3a188 0, transparent 35%, transparent 65%, #d3a188) 1;
+    border-color: rgb(89, 88, 88);
+    border-width: 1px;
+    border-image-width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    margin-bottom: 10vh;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &_title {
+        font-size: 2.5rem;
+        font-weight: 100;
+    }
+
+    &_p {
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    &_input {
+        outline: none;
+        border: none;
+        appearance: none;
+        background-color: transparent;
+        border-bottom: 1px solid grey;
+        width: 15vw;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        &::placeholder {
+            color: grey;
+        }
+    }
+    &_btn {
+        outline: none;
+        border: none;
+        appearance: none;
+        cursor: pointer;
+        width: 200px;
+        background: transparent;
+        border: 1px solid rgba(255, 203, 92, 0.63);
+        height: 60px;
+        font-size: 1.2rem;
+        font-weight: 100;
+        color: rgba(255, 203, 92, 0.63);
+    }
+}

@@ -7,7 +7,7 @@ export function Header() {
             <nav className={s.nav}>
                 <div className={s.title_box}>
                     <h1 className={s.title}>
-                        15 years <br /> on the market!
+                        15 Лет <br /> на рынке!
                     </h1>
                 </div>
                 <div className={s.image_box}>
