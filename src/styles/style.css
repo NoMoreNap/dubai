@@ -5,7 +5,9 @@
     color: aliceblue;
     font-family: "Raleway", sans-serif;
     box-sizing: border-box;
+    font-weight: 100;
 }
+
 :root {
     color-scheme: dark;
 }

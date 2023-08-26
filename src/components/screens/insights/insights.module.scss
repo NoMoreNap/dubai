@@ -1,0 +1,109 @@
+.main {
+    padding-left: calc(50% - 700px);
+    padding-right: calc(50% - 700px);
+    width: 100vw;
+    height: fit-content;
+    background-image: url(../../../assets/bg1.webp);
+    background-repeat: no-repeat;
+    background-position: 50% 35%;;
+    background-color: rgba(14, 14, 14, 0.8);
+    display: flex;
+    padding-top: 5vh;
+    gap: 10vh;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid grey;
+}
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    &_title {
+        font-size: 3rem;
+        font-weight: 100;
+    }
+    &_p {
+        width: 80%;
+        font-size: 1.3rem;
+        font-weight: 100;
+        text-align: center;
+    }
+}
+
+.cards {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.window {
+    width: 100%;
+    overflow: hidden;
+}
+.items{
+    display: flex;
+    width: fit-content;
+    transition: .3s;
+    transform: translateX(0px);
+    justify-content: flex-start;
+}
+.item {
+    height: 35vh;
+    border: 1px solid rgba(143, 143, 143, 0.596);
+    background-image: linear-gradient(135deg,transparent,#202020,rgba(133, 133, 133, 0.295));
+    display: flex;
+    &_content {
+        width: max-content;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10%;
+        padding: 0 5vw;
+        &__title {
+            font-size: 3rem;
+            font-weight: 100;
+        } 
+        &__p {
+            max-width: 70%;
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+    }
+
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    &_wrapper {
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:hover {
+            & span {
+                height: 5px;
+            }
+        }
+
+    }
+    &_item {
+        display: inline-block;
+        width: 8vw;
+        border-radius: 2px;
+        height: 2px;
+        cursor: pointer;
+        background-color: #a7a7a76c;
+        transition: .1s height, .1s background-color;
+        pointer-events: none;
+    }
+}
+.active {
+    background-color: rgba(255, 255, 255, 0.699);
+}

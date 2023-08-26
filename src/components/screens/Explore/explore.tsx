@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { ModalPrompt } from "../../blocks/modals/modals";
 import s from "./explore.module.css";
 
 function Gallery(props: { width: number }) {
@@ -35,53 +36,83 @@ function Gallery(props: { width: number }) {
                     <div className={s.item} style={{ width: prop }}>
                         <img
                             className={s.item_img}
-                            src="img/carusel/1.webp"
+                            src="img/carusel/1.jpg"
                             alt=""
                         />
+                        <div className={s.item_info}>
+                            <h1 className={s.item_info__title}>
+                                Жизнь в центре города
+                            </h1>
+                        </div>
                     </div>
                     <div className={s.item} style={{ width: prop }}>
                         <img
                             className={s.item_img}
-                            src="img/carusel/1.webp"
+                            src="img/carusel/2.webp"
                             alt=""
                         />
+                        <div className={s.item_info}>
+                            <h1 className={s.item_info__title}>
+                                Жилой комплекс
+                            </h1>
+                        </div>
                     </div>
                     <div className={s.item} style={{ width: prop }}>
                         <img
                             className={s.item_img}
-                            src="img/carusel/1.webp"
+                            src="img/carusel/3.jpg"
                             alt=""
                         />
+                        <div className={s.item_info}>
+                            <h1 className={s.item_info__title}>
+                                Жизнь в Марине
+                            </h1>
+                        </div>
                     </div>
                     <div className={s.item} style={{ width: prop }}>
                         <img
                             className={s.item_img}
-                            src="img/carusel/1.webp"
+                            src="img/carusel/4.jpg"
                             alt=""
                         />
+                        <div className={s.item_info}>
+                            <h1 className={s.item_info__title}>
+                                Собственность ближе к воде
+                            </h1>
+                        </div>
                     </div>
                     <div className={s.item} style={{ width: prop }}>
                         <img
                             className={s.item_img}
-                            src="img/carusel/1.webp"
+                            src="img/carusel/5.jpg"
                             alt=""
                         />
+                        <div className={s.item_info}>
+                            <h1 className={s.item_info__title}>
+                                Собственность на набережной
+                            </h1>
+                        </div>
                     </div>
                     <div className={s.item} style={{ width: prop }}>
                         <img
                             className={s.item_img}
-                            src="img/carusel/1.webp"
+                            src="img/carusel/6.webp"
                             alt=""
                         />
+                        <div className={s.item_info}>
+                            <h1 className={s.item_info__title}>
+                                Пентхаусы LUXE
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className={s.gallery_nav}>
                 <span className={s.gallery_btn} onClick={prev}>
-                    PREV
+                    НАЗАД
                 </span>
                 <span className={s.gallery_btn} onClick={next}>
-                    NEXT
+                    ВПЕРЕД
                 </span>
             </div>
         </div>
@@ -91,6 +122,10 @@ function Gallery(props: { width: number }) {
 export function Explore() {
     const main = useRef<HTMLDivElement>(null);
     const [currentWidth, setCurrentWidth] = useState(0);
+    const [modal, setModal] = useState(false);
+    const swither = (e: boolean) => {
+        setModal(e);
+    };
     useEffect(() => {
         if (main.current) {
             setCurrentWidth(main.current.getBoundingClientRect().width);
@@ -98,19 +133,21 @@ export function Explore() {
     }, []);
     return (
         <div className={s.main}>
+            {modal ? <ModalPrompt close={swither} /> : <></>}
             <section ref={main} className={s.prompt}>
-                <h1 className={s.prompt_title}>Prompt consultation</h1>
+                <h1 className={s.prompt_title}>Заказать консультацию</h1>
                 <p className={s.prompt_p}>
-                    Fill in the form and our agent will contact you shortly.
+                    Заполните форму, и наш агент свяжется с вами в ближайшее
+                    время.
                 </p>
-                <button className={s.prompt_btn}>Enquire now</button>
+                <button onClick={() => {setModal(true)}} className={s.prompt_btn}>Спросить сейчас</button>
             </section>
             <section className={s.lifestyle}>
                 <div className={s.lifestyle_head}>
-                    <h1 className={s.lifestyle_head__title}>LIFESTYLE</h1>
+                    <h1 className={s.lifestyle_head__title}>ОБРАЗ ЖИЗНИ</h1>
                     <p className={s.lifestyle_head__p}>
-                        Wide range options for any lifestyle. Make your choice
-                        with us
+                        Широкий выбор вариантов для любого образа жизни.
+                        Сделайте свой выбор вместе с нами
                     </p>
                 </div>
             </section>

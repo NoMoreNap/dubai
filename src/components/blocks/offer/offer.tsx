@@ -42,15 +42,16 @@ export function Offer() {
             <div className={s.disc}>
                 <div className={s.buttons}>
                     <h1 onMouseEnter={focuced} data-buy ref={buy}>
-                        BUY
+                        КУПИТЬ
                     </h1>
                     <h1 onMouseEnter={focuced} data-rent ref={rent}>
-                        RENT
+                        СНЯТЬ
                     </h1>
                 </div>
                 <p className={s.p}>
-                    With a comprehensive portfolio of properties and countless
-                    offers, we cover all your real estate needs.
+                    Обладая обширным портфолио объектов недвижимости и
+                    бесчисленными предложениями, мы удовлетворим все ваши
+                    потребности в недвижимости.
                 </p>
             </div>
         </div>

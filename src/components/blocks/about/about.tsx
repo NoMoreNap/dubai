@@ -1,29 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import { ModalPrompt } from "../modals/modals";
 import s from "./about.module.css";
 
 export function About() {
+    const [modal, setModal] = useState(false);
+    const swither = (e: boolean) => {
+        setModal(e)
+    }
+    console.log(modal)
     return (
         <div className={s.main}>
+            {modal ? <ModalPrompt close={swither}/> : <></>}
             <img className={s.img} src="img/about.jpeg" alt="" />
             <div className={s.disc}>
                 <div className={s.textarea}>
-                    <h1 className={s.textarea_title}>Real estate experts</h1>
-                    <p>We understand the fact that modern people strive for maximum comfort.</p>
-                    <p>A harmonious environment, communication with professionals, accurate and timely information, commitment, reliable and convenient technological solutions that save the resources that are important to them.</p>
-                    <p>We have implemented all these in НАЗВАНИЕ</p>
-                    <button className={s.btn}>Enquire now</button>
+                    <h1 className={s.textarea_title}>Эксперты по недвижимости</h1>
+                    <p>Мы понимаем, что современные люди стремятся к максимальному комфорту.</p>
+                    <p>Гармоничная среда, общение с профессионалами, точная и своевременная информация, целеустремленность, надежные и удобные технологические решения, которые экономят важные для вас ресурсы.</p>
+                    <p>Мы объединили все это в НАЗВАНИЕ</p>
+                    <button onClick={() => {setModal(true)}} className={s.btn}>Спросить сейчас</button>
                 </div>
                 <div className={s.stats}>
                     <div className={s.info}>
-                        <h1 className={s.info_header}>Offers in the Database</h1>
+                        <h1 className={s.info_header}>ПРЕДЛОЖЕНИЙ</h1>
                         <p className={s.info_par}>5000+</p>
                     </div>
                     <div className={s.info}>
-                        <h1 className={s.info_header}>LANGUAGES</h1>
+                        <h1 className={s.info_header}>ЯЗЫКОВ</h1>
                         <p className={s.info_par}>30+</p>
                     </div>
                     <div className={s.info}>
-                        <h1 className={s.info_header}>SPECIALISTS</h1>
+                        <h1 className={s.info_header}>СПЕЦИАЛИСТОВ</h1>
                         <p className={s.info_par}>500+</p>
                     </div>
                 </div>
