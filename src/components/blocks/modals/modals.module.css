@@ -135,4 +135,59 @@
   font-size: 1.2rem;
   font-weight: 100;
   color: rgba(255, 203, 92, 0.63);
+}
+
+@media screen and (max-width: 900px) {
+  .head_p {
+    text-align: center;
+  }
+  .form {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .form_input {
+    width: 100%;
+  }
+}
+/* iphones max */
+@media screen and (max-width: 430px) {
+  .main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .window {
+    width: 100%;
+  }
+  .window svg {
+    width: 60px;
+    height: 60px;
+  }
+  .content_title {
+    font-size: 2rem;
+  }
+  .content_p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .main_p {
+    width: 100%;
+  }
+  .head_p_title {
+    font-size: 2rem;
+  }
+  .head_p_p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(187, 187, 187);
+  }
+  .form_input {
+    font-size: 1rem;
+  }
+  .form_input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .form_input::placeholder {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=modals.module.css.map */

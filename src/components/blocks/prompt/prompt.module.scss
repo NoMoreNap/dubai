@@ -35,6 +35,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+
     &_input {
         outline: none;
         border: none;
@@ -45,10 +46,12 @@
         color: #fff;
         font-size: 1.5rem;
         padding: 10px 20px;
+
         &::placeholder {
             color: grey;
         }
     }
+
     &_btn {
         outline: none;
         border: none;
@@ -62,4 +65,69 @@
         font-weight: 100;
         color: rgba(255, 203, 92, 0.63);
     }
+}
+
+
+/* notebooks */
+
+@media screen and (max-width: 1580px) {
+    .form {
+        &_input {
+            font-size: 1.3rem;
+
+            &::placeholder {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+/* ipads */
+
+@media screen and (max-width: 900px) {
+    .main {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .head {
+        &_p {
+            text-align: center;
+        }
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        &_input {
+            width: 100%;
+        }
+    }
+}
+
+/* iphones max */
+
+@media screen and (max-width: 430px) {
+    .head {
+        &_title {
+            text-align: center;
+            font-size: 1.7rem;
+        }
+        &_p {
+            font-size: 1rem;
+            color: rgb(187, 187, 187);
+        }
+    }
+    .form {
+        &_input {
+            font-size: 1rem;
+
+            &::placeholder {
+                font-size: 1rem;
+            }
+        }
+    }
+
 }

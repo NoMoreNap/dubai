@@ -150,4 +150,71 @@
 .item_info__title {
   font-size: 1.6rem;
   font-weight: 100;
+}
+
+/* ipads */
+@media screen and (max-width: 900px) {
+  .main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .prompt_title {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  .prompt_p {
+    font-size: 1.2rem;
+  }
+  .lifestyle_head__p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .item {
+    height: 538px;
+  }
+  .item_info__title {
+    font-size: 1.4rem;
+  }
+  .gallery_btn {
+    width: 200px;
+  }
+}
+/* iphones max */
+@media screen and (max-width: 430px) {
+  .main {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .prompt {
+    width: 110%;
+  }
+  .prompt h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .prompt p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .items {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .window {
+    overflow: auto;
+  }
+  .gallery {
+    margin-bottom: 0;
+  }
+  .gallery_nav {
+    display: none;
+  }
+}
+/* iphones normal */
+@media screen and (max-width: 400px) {
+  .prompt {
+    width: 101%;
+  }
 }/*# sourceMappingURL=explore.module.css.map */

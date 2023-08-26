@@ -28,3 +28,17 @@
     padding: 0;
     width: 10px;
 }
+
+/* notebooks */
+
+@media screen and (max-width: 1580px) {
+    * {
+        font-size: 15px
+    } 
+}
+
+/* ipads */
+
+@media screen and (max-width: 900) {
+    
+}

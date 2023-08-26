@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import s from "./modals.module.css";
+const URL = 'https://bayonetta.ru/feedback/api.php'
 function Success() {
     return (
         <svg
@@ -36,6 +37,7 @@ function Success() {
         </svg>
     );
 }
+
 
 export function ModalThanks(props: {
     close: (e: boolean) => void;
@@ -88,7 +90,7 @@ export function ModalPrompt(props: {
     const swithcer = (e: boolean) => {
         setModal(e);
     };
-    const sendForm = (e: React.FormEvent<HTMLFormElement>) => {
+    const sendForm = async(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData();
         if (!name || !phone || !mail) {
@@ -97,6 +99,10 @@ export function ModalPrompt(props: {
         formData.append("name", name);
         formData.append("phone", phone);
         formData.append("mail", mail);
+        await fetch(URL, {
+            method: 'POST',
+            body: formData
+        }).then(res => console.log(res))
         setModal(true);
     };
 

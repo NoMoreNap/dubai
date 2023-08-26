@@ -9,11 +9,29 @@
     justify-content: center;
     gap: 20px;
 }
+
 .title {
     font-size: 5rem;
     font-weight: 100;
 }
+
 .par {
     font-size: 1.5rem;
     font-weight: 200;
+}
+
+/* iphones max */
+
+@media screen and (max-width: 430px) {
+    .title {
+        text-align: center;
+    }
+
+    .par {
+        text-align: center;
+
+    }
+    .content {
+        padding: 10px;
+    }
 }

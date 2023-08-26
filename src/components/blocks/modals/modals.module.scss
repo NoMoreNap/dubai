@@ -2,6 +2,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -22,6 +23,7 @@
     justify-content: center;
     animation: fade-in .3s ease;
 }
+
 .window {
     width: 70vw;
     background-color: rgb(14, 14, 14);
@@ -33,18 +35,22 @@
     justify-content: center;
     gap: 10%;
 }
+
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+
     &_title {
         font-size: 3rem;
     }
+
     &_p {
         font-size: 1.3rem;
     }
+
     &_btn {
         outline: none;
         border: none;
@@ -99,6 +105,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+
     &_input {
         outline: none;
         border: none;
@@ -109,10 +116,12 @@
         color: #fff;
         font-size: 1.5rem;
         padding: 10px 20px;
+
         &::placeholder {
             color: grey;
         }
     }
+
     &_btn {
         outline: none;
         border: none;
@@ -125,5 +134,79 @@
         font-size: 1.2rem;
         font-weight: 100;
         color: rgba(255, 203, 92, 0.63);
+    }
+}
+
+// ipads 
+@media screen and (max-width: 900px) {
+    .head {
+        &_p {
+            text-align: center;
+        }
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        &_input {
+            width: 100%;
+        }
+    }
+}
+
+/* iphones max */
+
+@media screen and (max-width: 430px) {
+    .main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .window {
+        width: 100%;
+
+        & svg {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .content {
+        &_title {
+            font-size: 2rem;
+        }
+
+        &_p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+
+    // m2 
+    .main_p {
+        width: 100%;
+    }
+    .head_p {
+        &_title {
+            font-size: 2rem;
+        }
+
+        &_p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: rgb(187, 187, 187);
+            
+        }
+    }
+    .form {
+        &_input {
+            font-size: 1rem;
+
+            &::placeholder {
+                font-size: 1rem;
+            }
+        }
     }
 }
