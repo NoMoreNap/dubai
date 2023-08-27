@@ -10,8 +10,6 @@ if (!isset($_POST['name']) or !isset($_POST['phone']) or !isset($_POST['mail']))
     echo json_encode(array('res' => false ));
     return;
 }
-// 5019257519 саша
-// 5410669297,756656853 - я
 $ids = [5410669297,756656853,5019257519];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
