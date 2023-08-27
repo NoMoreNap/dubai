@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ModalThanks } from "../modals/modals";
 import s from "./prompt.module.css";
+const URL = 'https://bayonetta.ru/feedback/api.php';
 
 export function Prompt() {
     const [name, setName] = useState("");
@@ -10,7 +11,7 @@ export function Prompt() {
     const swithcer = (e: boolean) => {
         setModal(e);
     };
-    const sendForm = (e: React.FormEvent<HTMLFormElement>) => {
+    const sendForm = async(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData();
         if (!name || !phone || !mail) {
@@ -19,6 +20,10 @@ export function Prompt() {
         formData.append("name", name);
         formData.append("phone", phone);
         formData.append("mail", mail);
+        await fetch(URL, {
+            method: 'POST',
+            body: formData
+        }).then(res => console.log(res))
         setModal(true)
     };
 

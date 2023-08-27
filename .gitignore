@@ -10,7 +10,7 @@
 
 # production
 /build
-
+/feedback/config.php
 # misc
 .DS_Store
 .env.local

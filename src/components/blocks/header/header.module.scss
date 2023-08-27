@@ -30,3 +30,24 @@
         cursor: pointer;
     }
 }
+/* iphones max */
+
+@media screen and (max-width: 430px) {
+    .contacts {
+        & h1 {
+            display: none;
+        }
+
+    }
+    .logos {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav {
+        padding: 0;
+    }
+    .header {
+        height: 100px;
+        padding: 20px 15px;
+    }    
+}

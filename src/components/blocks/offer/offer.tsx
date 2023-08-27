@@ -41,10 +41,10 @@ export function Offer() {
             )}
             <div className={s.disc}>
                 <div className={s.buttons}>
-                    <h1 onMouseEnter={focuced} data-buy ref={buy}>
+                    <h1 onMouseEnter={focuced} onClick={focuced} data-buy ref={buy}>
                         КУПИТЬ
                     </h1>
-                    <h1 onMouseEnter={focuced} data-rent ref={rent}>
+                    <h1 onMouseEnter={focuced} onClick={focuced} data-rent ref={rent}>
                         СНЯТЬ
                     </h1>
                 </div>

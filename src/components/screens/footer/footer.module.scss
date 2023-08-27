@@ -19,3 +19,12 @@
     border-bottom: 1px solid grey;
     padding-bottom: 5vh;
 }
+
+
+@media screen and (max-width: 900px) {
+    .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}

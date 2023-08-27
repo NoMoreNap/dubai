@@ -4,14 +4,18 @@ import s from "./explore.module.css";
 
 function Gallery(props: { width: number }) {
     const carusel = useRef<HTMLDivElement>(null);
+    const [currentWidth, setCurrentWidth] = useState(+window.innerWidth);
+    const visible = currentWidth < 900 ? (currentWidth < 500 ? 2 : 1) : 3;
+    const gap = currentWidth < 900 ? (currentWidth < 500 ? 20 : 40) : 80;
     const { width } = props;
-    const prop = (width - 80) / 3;
+    const prop = currentWidth > 500 ? (width - gap) / visible : width;
+    console.log(width)
     const ratio = prop + 40;
     let offset = 0;
     let i = 0;
     const next = () => {
         if (carusel.current) {
-            if (i === 3) return;
+            if (i === 6 - visible) return;
             i++;
             offset += ratio;
             carusel.current.style.transform = `translateX(-${offset}px)`;
@@ -24,11 +28,15 @@ function Gallery(props: { width: number }) {
             }
             i--;
             offset = ratio * i;
-            console.log(i);
             carusel.current.style.transform = `translateX(-${offset}px)`;
         }
     };
-
+    const handleResize = () => {
+        setCurrentWidth(+window.innerWidth);
+    };
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+    }, []);
     return (
         <div className={s.gallery}>
             <div className={s.window}>
@@ -140,7 +148,14 @@ export function Explore() {
                     Заполните форму, и наш агент свяжется с вами в ближайшее
                     время.
                 </p>
-                <button onClick={() => {setModal(true)}} className={s.prompt_btn}>Спросить сейчас</button>
+                <button
+                    onClick={() => {
+                        setModal(true);
+                    }}
+                    className={s.prompt_btn}
+                >
+                    Спросить сейчас
+                </button>
             </section>
             <section className={s.lifestyle}>
                 <div className={s.lifestyle_head}>
