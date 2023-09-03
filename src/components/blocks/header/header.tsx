@@ -15,10 +15,22 @@ export function Header() {
                 </div>
                 <div className={s.contacts}>
                     <div className={s.logos}>
-                        <img src="img/tg.svg" alt="telegram" />
-                        <img src="img/wt.svg" alt="telegram" />
+                        <a
+                            href="https://t.me/EVGENICH777NEW"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img src="img/tg.svg" alt="telegram" />
+                        </a>
+                        <a
+                            href="https://clck.ru/35ZYDL"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img src="img/wt.svg" alt="telegram" />
+                        </a>
                     </div>
-                    <h1>+7 (999) 000 00 00</h1>
+                    <h1>+971 50 339 8680</h1>
                 </div>
             </nav>
         </header>

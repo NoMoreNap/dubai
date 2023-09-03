@@ -20,12 +20,17 @@
 
 .title {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .contacts {
   width: -moz-fit-content;
   width: fit-content;
+}
+.contacts h1 {
+  font-family: Inter;
+  font-size: 1.3rem;
+  font-weight: 200;
 }
 
 .logos {
@@ -51,5 +56,8 @@
   .header {
     height: 100px;
     padding: 20px 15px;
+  }
+  .title_box {
+    display: none;
   }
 }/*# sourceMappingURL=header.module.css.map */

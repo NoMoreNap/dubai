@@ -10,7 +10,6 @@ if (!isset($_POST['name']) or !isset($_POST['phone']) or !isset($_POST['mail']))
     echo json_encode(array('res' => false ));
     return;
 }
-$ids = [5410669297,756656853,5019257519];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $mail = $_POST['mail'];
@@ -19,9 +18,7 @@ $date = date('Y M D H:i', time());
 if ($DB->insert([$name,$phone,$mail,$date,$hash])) {
     $id = $DB->select($hash)[0]['id'];
     $str = "Имя:    `$name`\nТелефон:    `$phone`\nПочта:   `$mail`\nID:    `$id`";
-    foreach ($ids as $id) {
-        $BOT->send($str, $id);
-    }
+    $BOT->send($str, -900685369);
     http_response_code(200);
     echo json_encode(array('res' => true ));
 } else {

@@ -170,6 +170,13 @@
     font-size: 1.2rem;
     text-align: center;
   }
+  .main {
+    align-items: flex-end;
+  }
+  .main_p {
+    padding: 40px 50px;
+    margin-bottom: 140px;
+  }
   .main_p {
     width: 100%;
   }

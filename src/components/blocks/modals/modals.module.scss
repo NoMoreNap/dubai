@@ -184,10 +184,21 @@
         }
     }
 
+    .main {
+        align-items: flex-end;
+
+        &_p {
+            padding: 40px 50px;
+            margin-bottom: 140px;
+        }
+
+    }
+
     // m2 
     .main_p {
         width: 100%;
     }
+
     .head_p {
         &_title {
             font-size: 2rem;
@@ -197,9 +208,10 @@
             font-size: 1.1rem;
             text-align: center;
             color: rgb(187, 187, 187);
-            
+
         }
     }
+
     .form {
         &_input {
             font-size: 1rem;
